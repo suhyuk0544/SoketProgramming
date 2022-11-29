@@ -32,6 +32,9 @@ public class TcpIpServer {
 
             System.out.println("{"+socket.getInetAddress()+":"+socket.getPort()+"} 접속");
 
+            ServerReceiver t = new ServerReceiver(socket);
+            t.start();
+
         }
 
     }
